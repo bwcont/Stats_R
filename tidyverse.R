@@ -37,9 +37,14 @@ gapminder %>%
 #then we arranged that in descending order by piping the previous
 #info to the next verb
 
+##mutate verbs
+#mutate lets you remake the data set you have
+gapminder %>%
+  mutate(lifeExp = lifeExp * 12)
 
-
-
+#making a new name will add a new column to your data set
+gapminder %>%
+  mutate(lifeExpMonths = lifeExp)
 
 
 
