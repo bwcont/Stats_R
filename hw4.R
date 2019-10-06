@@ -37,3 +37,6 @@ points(x,
 
 legend(x = 5, y=.3 , legend=c("Binomial Dist", "Poisson Dist."),
        col=c("black", "red"), lty=1, lw = 2, cex=0.8)
+
+
+#Pois Good approx 
