@@ -17,3 +17,23 @@
 
 
 
+
+##Here is our binomial distribution
+
+x <- 0:250 #number of occurances
+binom.dist <- dbinom(x, 250, 0.01) #n = 250; p=0.01
+plot(x, binom.dist, type = 'h',
+     xlim = c(0,10), ylim = c(0,(max(binom.dist)+.1)),
+     ylab = "Probability", xlab = "# of Occurance",
+     main = "Binomial and Poisson Approximation"
+     )
+
+##Here is our poisson distribution
+lam.pois = 250*.01 #lambda = prob*occurances
+points(x,
+       dpois(x,lambda = lam.pois),
+       type='l',col='red',lwd=3.5
+       )
+
+legend(x = 5, y=.3 , legend=c("Binomial Dist", "Poisson Dist."),
+       col=c("black", "red"), lty=1, lw = 2, cex=0.8)
